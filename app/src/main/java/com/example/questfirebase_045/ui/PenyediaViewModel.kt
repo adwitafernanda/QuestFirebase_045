@@ -8,6 +8,7 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.questfirebase_045.MahasiswaApplications
 import com.example.questfirebase_045.model.Mahasiswa
 import com.example.questfirebase_045.ui.home.viewmodel.HomeViewModel
+import com.example.questfirebase_045.ui.insert.viewmodel.InsertViewModel
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
