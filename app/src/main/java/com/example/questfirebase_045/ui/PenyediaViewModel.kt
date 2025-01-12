@@ -16,8 +16,14 @@ object PenyediaViewModel {
                 mahasiswaApp().container.repositoryMhs
             )
         }
+
+        initializer {
+            InsertViewModel(
+                mahasiswaApp().container.repositoryMhs
+            )
+        }
     }
 }
 
 fun CreationExtras.mahasiswaApp(): MahasiswaApplications =
-    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]as MahasiswaApplications)
+    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as MahasiswaApplications)
