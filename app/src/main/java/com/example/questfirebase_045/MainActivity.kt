@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.questfirebase_045.ui.home.pages.HomeScreen
+import com.example.questfirebase_045.ui.navigation.PengelolaHalaman
 import com.example.questfirebase_045.ui.theme.QuestFirebase_045Theme
 
 class MainActivity : ComponentActivity() {
@@ -21,10 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuestFirebase_045Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(
+                    PengelolaHalaman(
 
                         modifier = Modifier.padding(innerPadding),
-                        navigateToItemEntry = {}
                     )
                 }
             }
