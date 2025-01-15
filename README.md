@@ -8,7 +8,8 @@
 
 2. Halaman Tambah Mahasiswa
 
-   ![image](https://github.com/user-attachments/assets/f34d5d3c-319d-4173-9c12-4b72a34b9136)
+   ![image](https://github.com/user-attachments/assets/266a07e7-7acc-40b5-a460-ef5c83a76a12)
+
 
 
 
