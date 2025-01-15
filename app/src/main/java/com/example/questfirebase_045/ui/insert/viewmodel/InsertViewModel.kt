@@ -33,7 +33,11 @@ class InsertViewModel(
             jenisKelamin = if (event.jenisKelamin.isNotEmpty()) null else "Jenis Kelamin tidak boleh kosong",
             alamat = if (event.alamat.isNotEmpty()) null else "Alamat tidak boleh kosong",
             kelas = if (event.kelas.isNotEmpty()) null else "Kelas tidak boleh kosong",
-            angkatan = if (event.angkatan.isNotEmpty()) null else "Angkatan tidak boleh kosong",
+            angkatan = if (event.angkatan.isNotEmpty()) null else "Angkatan tidak boleh kosong" ,
+            judulskripsi = if (event.judulskripsi.isNotEmpty()) null else "judul skripsi tidak boleh kosong",
+            dosenpemsatu = if (event.dosenpemsatu.isNotEmpty()) null else "dosenpemsatu tidak boleh kosong",
+            dosenpemdua = if (event.dosenpemdua.isNotEmpty()) null else "dosenpemdua tidak boleh kosong",
+
         )
 
         uiEvent = uiEvent.copy(isEntryValid = errorState)
@@ -85,7 +89,10 @@ data class MahasiswaEvent(
     val alamat: String = "",
     val kelas: String = "",
     val angkatan: String = "",
-)
+    val judulskripsi: String = "",
+    val dosenpemsatu: String = "",
+    val dosenpemdua: String = "",
+    )
 
 fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
     nim = nim,
@@ -93,7 +100,10 @@ fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
     jenisKelamin = jenisKelamin,
     alamat = alamat,
     kelas = kelas,
-    angkatan = angkatan
+    angkatan = angkatan,
+    judulskripsi = judulskripsi,
+    dosenpemsatu = dosenpemsatu,
+    dosenpemdua = dosenpemdua
 )
 
 data class FormErrorState(
@@ -103,6 +113,9 @@ data class FormErrorState(
     val alamat: String? = null,
     val kelas: String? = null,
     val angkatan: String? = null,
+    val judulskripsi: String? = null,
+    val dosenpemsatu: String? = null,
+    val dosenpemdua: String? = null
 ){
     fun isValid() : Boolean {
         return nim == null
@@ -111,5 +124,8 @@ data class FormErrorState(
                 && alamat == null
                 && kelas == null
                 && angkatan == null
+                && judulskripsi == null
+                && dosenpemsatu == null
+                && dosenpemdua == null
     }
 }

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.questfirebase_045.model.Mahasiswa
 import com.example.questfirebase_045.repository.RepositoryMhs
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
@@ -48,7 +49,12 @@ class HomeViewModel(
             }
         }
     }
+
+    fun getMhsDetail(nim: String): Flow<Mahasiswa> {
+        return repositoryMhs.getMhs(nim)
+    }
 }
+
 
 sealed class HomeuiState{
     object Loading : HomeuiState()
